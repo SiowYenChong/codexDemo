@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wonderlust • Discover</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <h1>Wonderlust</h1>
+      <nav class="view-nav" aria-label="Primary">
+        <button class="nav-btn active" data-view="discoverView" aria-current="page">Discover</button>
+        <button class="nav-btn" data-view="travelLogView">Travel Log</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="discoverView" class="view-panel active" aria-label="Discover destinations">
+        <div class="home-layout">
+          <section class="globe-panel" aria-label="Interactive globe">
+            <div class="panel-header">
+              <h2>Explore the world</h2>
+              <p>Drag to explore • Click a pin • Use ← and → keys</p>
+            </div>
+            <canvas id="globeCanvas" width="720" height="720" aria-label="3D destination globe"></canvas>
+            <p id="statusText" class="assistive">Selected: Tokyo, Japan</p>
+          </section>
+
+          <aside class="details-panel" aria-live="polite">
+            <h3 id="destinationTitle">Tokyo, Japan</h3>
+            <img id="destinationImage" alt="Destination preview" />
+            <p id="destinationSummary"></p>
+            <ul id="destinationFacts"></ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="travelLogView" class="view-panel" aria-label="Travel log dashboard">
+        <div class="travel-log-layout">
+          <article class="card stat-card">
+            <h2>Cities visited</h2>
+            <p class="big-number">27</p>
+          </article>
+
+          <article class="card stat-card">
+            <h2>Countries explored</h2>
+            <p class="big-number">14</p>
+          </article>
+
+          <article class="card span-2">
+            <h2>Upcoming trips</h2>
+            <div class="pill-row">
+              <span class="trip-pill">Seoul • Apr 2026</span>
+              <span class="trip-pill">Lisbon • Jun 2026</span>
+              <span class="trip-pill">Vancouver • Sep 2026</span>
+            </div>
+          </article>
+
+          <article class="card span-2">
+            <h2>Top moments this year</h2>
+            <ul class="activity-list">
+              <li>🥾 74 km walked while traveling</li>
+              <li>📸 1,248 photos captured</li>
+              <li>☕ 39 new cafés discovered</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Continent streak</h2>
+            <p>Visited 4 continents in the last 12 months.</p>
+          </article>
+
+          <article class="card">
+            <h2>Travel style</h2>
+            <p>65% culture • 25% nature • 10% food tours.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
