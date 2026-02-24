@@ -60,8 +60,6 @@ const destinationFacts = document.getElementById("destinationFacts");
 const statusText = document.getElementById("statusText");
 const navButtons = Array.from(document.querySelectorAll(".nav-btn"));
 const views = Array.from(document.querySelectorAll(".view-panel"));
-const assistantButton = document.getElementById("assistantButton");
-const assistantDialog = document.getElementById("assistantDialog");
 
 let selectedIndex = 0;
 let yaw = 0.45;
@@ -305,12 +303,6 @@ navButtons.forEach((button) => {
     switchView(button.dataset.view);
   });
 });
-
-if (assistantButton && assistantDialog) {
-  assistantButton.addEventListener("click", () => {
-    assistantDialog.showModal();
-  });
-}
 
 canvas.addEventListener("pointerdown", onPointerDown);
 canvas.addEventListener("pointermove", onPointerMove);

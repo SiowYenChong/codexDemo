@@ -10,13 +10,10 @@
   <div class="app-shell">
     <header class="topbar">
       <h1>Wonderlust</h1>
-      <div class="topbar-actions">
-        <nav class="view-nav" aria-label="Primary">
-          <button class="nav-btn active" data-view="discoverView" aria-current="page">Discover</button>
-          <button class="nav-btn" data-view="travelLogView">Travel Log</button>
-        </nav>
-        <button id="assistantButton" class="assistant-btn" aria-haspopup="dialog" aria-controls="assistantDialog">Open Assistant</button>
-      </div>
+      <nav class="view-nav" aria-label="Primary">
+        <button class="nav-btn active" data-view="discoverView" aria-current="page">Discover</button>
+        <button class="nav-btn" data-view="travelLogView">Travel Log</button>
+      </nav>
     </header>
 
     <main>
@@ -27,10 +24,7 @@
               <h2>Explore the world</h2>
               <p>Drag to explore • Click a pin • Use ← and → keys</p>
             </div>
-            <div class="globe-wrap">
-              <div class="globe-tip" role="note">Explore new country</div>
-              <canvas id="globeCanvas" width="720" height="720" aria-label="3D destination globe"></canvas>
-            </div>
+            <canvas id="globeCanvas" width="720" height="720" aria-label="3D destination globe"></canvas>
             <p id="statusText" class="assistive">Selected: Tokyo, Japan</p>
           </section>
 
@@ -86,18 +80,6 @@
       </section>
     </main>
   </div>
-
-  <dialog id="assistantDialog" class="assistant-dialog" aria-labelledby="assistantTitle">
-    <form method="dialog" class="assistant-dialog-content">
-      <header>
-        <h2 id="assistantTitle">Wonderlust Assistant</h2>
-      </header>
-      <p>I can help suggest destinations, plan routes, and build your next itinerary.</p>
-      <menu>
-        <button value="close" class="nav-btn active">Close</button>
-      </menu>
-    </form>
-  </dialog>
 
   <script src="app.js"></script>
 </body>
